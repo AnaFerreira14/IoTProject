@@ -12,7 +12,7 @@ import parser
 
 import csv
 
-csv_file_path = '../../Ana_accessKeys.csv'
+csv_file_path = '../../../Ana_accessKeys.csv'
 
 with open(csv_file_path, 'r') as csvfile:
     csv_reader = csv.reader(csvfile)
