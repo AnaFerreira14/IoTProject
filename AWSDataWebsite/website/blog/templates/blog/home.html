@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+    <h2>Last Detection for Station 1</h2>
+    <p>ID: {{ID}} <br> datetime: {{datetime}} <br> Humidity: {{Humidity}} %<br> Rain Height: {{RainHeight}} mm/h<br>
+      Temperature: {{Temperature}} °C<br> Wind Direction: {{WindDirection}} °<br> Wind Intensity: {{WindIntensity}} m/s
+    </p>
+
+    <br>
+    <br>
+
+    <h2>Last Detection for Station 2</h2>
+    <p>ID: {{ID2}} <br> datetime: {{datetime2}} <br> Humidity: {{Humidity2}} %<br> Rain Height: {{RainHeight2}} mm/h<br>
+      Temperature: {{Temperature2}} °C<br> Wind Direction: {{WindDirection2}} °<br> Wind Intensity: {{WindIntensity2}} m/s
+    </p>
+
+{% endblock content %}

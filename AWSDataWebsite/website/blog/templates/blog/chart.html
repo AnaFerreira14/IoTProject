@@ -1,0 +1,228 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <h2>Chart Data</h2>
+    <br>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    {{ context|json_script:"context" }}
+    
+    <canvas id="RainHeight" style="width:100%;max-width:1000px"></canvas>
+
+    <script>
+
+    const value = JSON.parse(document.getElementById('context').textContent);
+
+    //alert(value['time']);
+
+    new Chart("RainHeight", {
+    type: "line",
+    data: {
+        labels: value['time'],
+        datasets: [{ 
+        label: "station1",
+        data: value['station1_rainheight'],
+        borderColor: "red",
+        fill: false
+        }, {
+        label: "station2",
+        data: value['station2_rainheight'],
+        borderColor: "green",
+        fill: false
+        }]
+    },
+    options: {
+        legend: {display: true, position: 'bottom'},
+        title: {
+            display: true,
+            text: 'Rain Height', // Your title text here
+            fontSize: 30 // You can customize the font size
+        },
+        scales: {
+            yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: 'mm/h'
+            }
+            }]
+        }
+    }
+    });
+    </script>
+
+    <br>
+
+    <canvas id="WindIntensity" style="width:100%;max-width:1000px"></canvas>
+
+    <script>
+
+    //alert(value['time']);
+
+    new Chart("WindIntensity", {
+    type: "line",
+    data: {
+        labels: value['time'],
+        datasets: [{ 
+        label: "station1",
+        data: value['station1_windintensity'],
+        borderColor: "red",
+        fill: false
+        }, {
+        label: "station2",
+        data: value['station2_windintensity'],
+        borderColor: "green",
+        fill: false
+        }]
+    },
+    options: {
+        legend: {display: true, position: 'bottom'},
+        title: {
+            display: true,
+            text: 'Wind Intensity', // Your title text here
+            fontSize: 30 // You can customize the font size
+        },
+        scales: {
+            yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: 'm/s'
+            }
+            }]
+        }
+    }
+    });
+    </script>
+
+    <br>
+
+    <canvas id="Temperature" style="width:100%;max-width:1000px"></canvas>
+
+    <script>
+
+    //alert(value['time']);
+
+    new Chart("Temperature", {
+    type: "line",
+    data: {
+        labels: value['time'],
+        datasets: [{ 
+        label: "station1",
+        data: value['station1_temperature'],
+        borderColor: "red",
+        fill: false
+        }, {
+        label: "station2",
+        data: value['station2_temperature'],
+        borderColor: "green",
+        fill: false
+        }]
+    },
+    options: {
+        legend: {display: true, position: 'bottom'},
+        title: {
+            display: true,
+            text: 'Temperature', // Your title text here
+            fontSize: 30 // You can customize the font size
+        },
+        scales: {
+            yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: 'C°'
+            }
+            }]
+        }
+    }
+    });
+
+    </script>
+
+    <br>
+
+    <canvas id="Humidity" style="width:100%;max-width:1000px"></canvas>
+
+    <script>
+
+    //alert(value['time']);
+
+    new Chart("Humidity", {
+    type: "line",
+    data: {
+        labels: value['time'],
+        datasets: [{ 
+        label: "station1",
+        data: value['station1_humidity'],
+        borderColor: "red",
+        fill: false
+        }, {
+        label: "station2",
+        data: value['station2_humidity'],
+        borderColor: "green",
+        fill: false
+        }]
+    },
+    options: {
+        legend: {display: true, position: 'bottom'},
+        title: {
+            display: true,
+            text: 'Humidity', // Your title text here
+            fontSize: 30 // You can customize the font size
+        },
+        scales: {
+            yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: '%'
+            }
+            }]
+        }
+    }
+    });
+
+    </script>
+
+    <br>
+
+    <canvas id="Wind Direction" style="width:100%;max-width:1000px"></canvas>
+
+    <script>
+
+    //alert(value['time']);
+
+    new Chart("Wind Direction", {
+    type: "line",
+    data: {
+        labels: value['time'],
+        datasets: [{ 
+        label: "station1",
+        data: value['station1_winddirection'],
+        borderColor: "red",
+        fill: false
+        }, {
+        label: "station2",
+        data: value['station2_winddirection'],
+        borderColor: "green",
+        fill: false
+        }]
+    },
+    options: {
+        legend: {display: true, position: 'bottom'},
+        title: {
+            display: true,
+            text: 'Wind Direction', // Your title text here
+            fontSize: 30 // You can customize the font size
+        },
+        scales: {
+            yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: '°'
+            }
+            }]
+        }
+    }
+    });
+
+    </script>
+
+{% endblock content %}
