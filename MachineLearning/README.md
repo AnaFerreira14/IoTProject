@@ -1,5 +1,7 @@
 ## Machine Learning Analysis
 
+This is an analysis of the data collected from the DynamoDB table that receives information from the Raspberry Pi Pico W microcontroller.
+
 Clusters made using a K-means model:
 
 ![clusters](https://github.com/user-attachments/assets/f690957e-901e-4c55-a9a3-d984b261a699)
