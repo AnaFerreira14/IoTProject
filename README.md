@@ -20,6 +20,8 @@ In order to gather data, a micro-python script was made to collect the temperatu
 
 Sign up into the ![Amazon website](aws.amamazon.com) or create an account. Search Dynamodb in the console and select the service. Then, select Create a Table, name it as you please and choose a partition key (make sure the data type is Number). This is the name of the primary key value in your table. Every key item added to your table should have a unique partition key value. Once you configured that, you can just step through and create the table with the default settings.
 
+### AWS Lambda Function
+
 ## References
 
 https://www.hackster.io/Shilleh/how-to-send-data-to-aws-dynamodb-from-raspberry-pi-pico-w-6a4ee1
