@@ -10,7 +10,7 @@ The DH11 sensor was used with an 8 bit microcontroller to output temperature and
 
 ### Setting up the Raspberry Pi Pico W board
 
-Firstly, let's install the Thonny IDE by going to the ![url](https://thonny.org/) and clicking on the right link to download the package for your operating system. After that, run the downloaded executable file and follow the installation procedure (use all the default settings). Then, the MicroPython Firmware needs to be flashed on the Raspberry Pi Pico W. Therefore, you should connect the Raspberry Pi Pico W to your computer while holding the BOOTSEL button at the same time so that it goes into bootloader mode to flash the firmware. Afterwards, open Thonny IDE and go to Tools > Options. Select the Interpreter tab on the new window that opens.
+Firstly, let's install the Thonny IDE by going to the ![url](https://thonny.org/) and clicking on the right link to download the package for your operating system. After that, run the downloaded executable file and follow the installation procedure (use all the default settings). Then, the MicroPython Firmware needs to be flashed on the Raspberry Pi Pico W. Therefore, you should connect the Raspberry Pi Pico W to your computer while holding the BOOTSEL button at the same time so that it goes into bootloader mode to flash the firmware. Afterwards, open Thonny IDE and go to Tools > Options. Select the Interpreter tab on the new window that opens. Select MicroPython (Raspberry Pi Pico) for the interpreter, and the Try to detect port automatically for the Port. Then, click on Install or update MicroPython. Select the Pico W/Pico WH MicroPython variant. Finally, click Install. After a few seconds, the installation should be completed.
 
 ### Collecting the data
 
