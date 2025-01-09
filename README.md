@@ -34,19 +34,19 @@ Now that you have a Thing with a policy, we want to create an IoT Rule, that wil
 
 Next select the Rule actions, in this case we select a Lambda action and the name of the function we created! AWS makes it easy for us, we can click th button 'Add rule action' and our rule is now created. Congratulations, you have set up the AWS infrastructure needed to implement this project!
 
-### Setting up the Raspberry Pi Pico W board
+### Set up the Raspberry Pi Pico W board
 
 This step will walk you through the set up of the Thonny IDE which will be used to write micro-python files in the Raspberry Pi Pico W board. If you have already set up Thonny IDE, please feel free to skip this step!
 
 Without further ado, let's install the Thonny IDE by going to the ![Thonny website](https://thonny.org/) and clicking on the right link to download the package for your operating system. After that, run the downloaded executable file and follow the installation procedure (use all the default settings). Then, the MicroPython Firmware needs to be flashed on the Raspberry Pi Pico W. Therefore, you should connect the Raspberry Pi Pico W to your computer while holding the BOOTSEL button at the same time so that it goes into bootloader mode to flash the firmware. Afterwards, open Thonny IDE and go to Tools > Options. Select the Interpreter tab on the new window that opens. Select MicroPython (Raspberry Pi Pico) for the interpreter, and the Try to detect port automatically for the Port. Then, click on Install or update MicroPython. Select the Pico W/Pico WH MicroPython variant. Finally, click Install. After a few seconds, the installation should be completed.
 
-### Setting up the necessary files
+### Import the necessary files
 
 Before we get to the main file, we need to import onto the Raspberry Pi Pico W board the 4 files that encompass the necessary certificates to connect with our Thing. Moreover, we must download the library for MQTT in micro-python. Open your micro-python editor (in this case we are using Thonny) to manage files on the Raspberry Pi Pico W and then upload the 4 files. Next, let's import the umqtt library onto the Raspberry Pi Pico W board. You can find the aforementioned file in this repository by going to the lib folder that is inside the PicoW folder. Then, copy this file and upload it onto the lib folder in your Raspberry Pi Pico W board. This is all you need for the library.
 
 Now that we have the setup, let's go ahead and address the file that will contain the main code.
 
-### Collecting the data
+### Collect the data
 
 In order to gather data, a micro-python script was made to collect the temperature and humidity captured by the DHT11 sensor. This script was named `PicoW_dht11_Mqtt.py` and is located in the folder PicoW of this repository. To run the program, the file must be uploaded to the Raspberry Pi Pico board. This can be done using the Thonny IDE, which is the recommended MicroPython IDE for the Raspberry Pi Pico. After that, some changes need to be made to the block of code shown below:
 
@@ -66,7 +66,7 @@ When you finish completing this information, you can run the micro-python file i
 
 In summary, the code initializes the I2C interface for communication with the DHT11 sensor, reads temperature and humidity data from the sensor, and publishes this data to the AWS IoT Core using MQTT with secure SSL/TLS communication. This setup ensures the integrity and security of the communication between the Raspberry Pi Pico W and the AWS IoT Core.
 
-### Testing the MQTT connection
+### Test the MQTT connection
 
 To ensure that everything is running smoothly, go back to the DynamoDb service in AWS, select Explore items and then select your table. If the board has succesfully connected to the AWS services, you should see data popping up on the DynamoDb table as time goes by. The table should be filled progressively with more and more data points.
 
