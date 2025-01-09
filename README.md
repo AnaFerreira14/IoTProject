@@ -42,7 +42,7 @@ Without further ado, let's install the Thonny IDE by going to the [Thonny websit
 
 ### Import the necessary files
 
-Before we get to the main file, we need to import onto the Raspberry Pi Pico W board the 4 files that encompass the necessary certificates to connect with our Thing. Moreover, we must download the library for MQTT in micro-python. Open your micro-python editor (in this case we are using Thonny) to manage files on the Raspberry Pi Pico W and then upload the 4 files. Next, let's import the umqtt library onto the Raspberry Pi Pico W board. You can find the aforementioned file in this repository by going to the lib folder that is inside the PicoW folder. Then, copy this file and upload it onto the lib folder in your Raspberry Pi Pico W board. This is all you need for the library.
+Before we get to the main file, we need to import onto the Raspberry Pi Pico W board the 4 files that encompass the necessary certificates to connect with our Thing. Moreover, we must download the library for MQTT in micro-python. Open your micro-python editor (in this case we are using Thonny) to manage files on the Raspberry Pi Pico W and then upload the 4 files. Next, let's import the file containing the umqtt library onto the Raspberry Pi Pico W board. You can find the aforementioned file in this repository by going to the lib folder that is inside the PicoW folder. Then, download this file (which is called `simple.py`) and upload it onto the lib folder in your Raspberry Pi Pico W board. This is all you need for the library.
 
 Now that we have the setup, let's go ahead and address the file that will contain the main code.
 
