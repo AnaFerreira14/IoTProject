@@ -10,7 +10,7 @@ The DH11 sensor was used with an 8 bit microcontroller to output temperature and
 
 ### Create an AWS DynamoDB Table
 
-Sign up into the ![Amazon website](aws.amamazon.com) or create an account. Search Dynamodb in the console and select the service. Then, select Create a Table, name it as you please (e.g.: DHT11) and choose a partition key (make sure the data type is Number). This is the name of the primary key value in your table. Every key item added to your table should have a unique partition key value. Once you configured that, you can just step through and create the table with the default settings.
+Sign up into the [Amazon website](aws.amamazon.com) or create an account. Search Dynamodb in the console and select the service. Then, select Create a Table, name it as you please (e.g.: DHT11) and choose a partition key (make sure the data type is Number). This is the name of the primary key value in your table. Every key item added to your table should have a unique partition key value. Once you configured that, you can just step through and create the table with the default settings.
 
 ### AWS Lambda Function
 
@@ -38,7 +38,7 @@ Next select the Rule actions, in this case we select a Lambda action and the nam
 
 This step will walk you through the set up of the Thonny IDE which will be used to write micro-python files in the Raspberry Pi Pico W board. If you have already set up Thonny IDE, please feel free to skip this step!
 
-Without further ado, let's install the Thonny IDE by going to the ![Thonny website](https://thonny.org/) and clicking on the right link to download the package for your operating system. After that, run the downloaded executable file and follow the installation procedure (use all the default settings). Then, the MicroPython Firmware needs to be flashed on the Raspberry Pi Pico W. Therefore, you should connect the Raspberry Pi Pico W to your computer while holding the BOOTSEL button at the same time so that it goes into bootloader mode to flash the firmware. Afterwards, open Thonny IDE and go to Tools > Options. Select the Interpreter tab on the new window that opens. Select MicroPython (Raspberry Pi Pico) for the interpreter, and the Try to detect port automatically for the Port. Then, click on Install or update MicroPython. Select the Pico W/Pico WH MicroPython variant. Finally, click Install. After a few seconds, the installation should be completed.
+Without further ado, let's install the Thonny IDE by going to the [Thonny website](https://thonny.org/) and clicking on the right link to download the package for your operating system. After that, run the downloaded executable file and follow the installation procedure (use all the default settings). Then, the MicroPython Firmware needs to be flashed on the Raspberry Pi Pico W. Therefore, you should connect the Raspberry Pi Pico W to your computer while holding the BOOTSEL button at the same time so that it goes into bootloader mode to flash the firmware. Afterwards, open Thonny IDE and go to Tools > Options. Select the Interpreter tab on the new window that opens. Select MicroPython (Raspberry Pi Pico) for the interpreter, and the Try to detect port automatically for the Port. Then, click on Install or update MicroPython. Select the Pico W/Pico WH MicroPython variant. Finally, click Install. After a few seconds, the installation should be completed.
 
 ### Import the necessary files
 
